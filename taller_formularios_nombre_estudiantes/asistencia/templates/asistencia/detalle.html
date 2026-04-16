@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Detalle Asistencia (app)</title></head>
+  <body>
+    <h1>Detalle</h1>
+    <p><strong>Nombre:</strong> {{ asistencia.nombreCompleto }}</p>
+    <p><strong>Documento:</strong> {{ asistencia.documentoIdentidad }}</p>
+    <p><strong>Email:</strong> {{ asistencia.correoElectronico }}</p>
+    <p><strong>Fecha:</strong> {{ asistencia.fechaAsistencia }}</p>
+    <p><strong>Hora ingreso:</strong> {{ asistencia.horaIngreso }}</p>
+    <p><strong>Hora salida:</strong> {{ asistencia.horaSalida }}</p>
+    <p><strong>Presente:</strong> {{ asistencia.presente }}</p>
+    <p><strong>Observaciones:</strong> {{ asistencia.observaciones }}</p>
+    <a href="{% url 'asistencia_list' %}">Volver a la lista</a>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Lista Asistencias (app)</title></head>
+  <body>
+    <h1>Asistencias</h1>
+    <ul>
+      {% for a in asistencias %}
+        <li><a href="{% url 'asistencia_detail' a.pk %}">{{ a.nombreCompleto }} — {{ a.fechaAsistencia }}</a></li>
+      {% empty %}
+        <li>No hay registros.</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'asistencia_new' %}">Crear nueva</a>
+  </body>
+</html>

@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('asistencia/nuevo/', asistencia_views.asistencia_create, name='asistencia_new'),
     path('asistencia/exito/', asistencia_views.asistencia_success, name='asistencia_success'),
+    path('asistencia/', asistencia_views.listar_asistencias, name='asistencia_list'),
+    path('asistencia/<int:pk>/', asistencia_views.detalle_asistencia, name='asistencia_detail'),
     path('solicitudes/nuevo/', solicitudes_views.solicitud_create, name='solicitud_new'),
     path('solicitudes/exito/', solicitudes_views.solicitud_success, name='solicitud_success'),
 ]

@@ -2,11 +2,12 @@
 <html>
   <head><meta charset="utf-8"><title>Formulario Asistencia</title></head>
   <body>
-    <h1>Registrar Asistencia</h1>
+    <h1>Registrar Asistencia (app)</h1>
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit">Enviar</button>
     </form>
+    <a href="{% url 'asistencia_list' %}">Volver a la lista</a>
   </body>
 </html>
