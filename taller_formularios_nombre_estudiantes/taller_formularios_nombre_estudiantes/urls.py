@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from asistencia import views as asistencia_views
+from solicitudes import views as solicitudes_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('asistencia/nuevo/', asistencia_views.asistencia_create, name='asistencia_new'),
     path('asistencia/exito/', asistencia_views.asistencia_success, name='asistencia_success'),
+    path('solicitudes/nuevo/', solicitudes_views.solicitud_create, name='solicitud_new'),
+    path('solicitudes/exito/', solicitudes_views.solicitud_success, name='solicitud_success'),
 ]

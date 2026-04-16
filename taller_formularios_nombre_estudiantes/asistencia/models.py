@@ -10,5 +10,5 @@ class Asistencia(models.Model):
     presente = models.BooleanField(default=False)
     observaciones = models.CharField(max_length=1000, blank=True)
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.nombreCompleto} - {self.documentoIdentidad} - {self.correoElectronico} - {self.fechaAsistencia} - {self.horaIngreso} - {self.horaSalida} - {'Presente' if self.presente else 'Ausente'} - {self.observaciones}"
