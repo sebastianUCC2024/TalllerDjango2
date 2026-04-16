@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from solicitudes import views as solicitudes_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('solicitudes/nuevo/', solicitudes_views.solicitud_create, name='solicitud_new'),
+    path('solicitudes/exito/', solicitudes_views.solicitud_success, name='solicitud_success'),
+
 ]
